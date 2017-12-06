@@ -1,0 +1,60 @@
+/*——————————57+去除左上角空白——————————*/
+#nav-bar {
+  border-top-left-radius: 0px!important;
+  border-top-right-radius: 0px!important;
+}
+[url=home.php?mod=space&uid=880893]@media[/url] (-moz-os-version: windows-win7) {
+  @media (-moz-windows-default-theme) {
+          .tab-background:not(:-moz-lwtheme):not([selected=true]) {
+                  background-color: rgba(0, 0, 0, .2) !important;
+          }
+          .tab-line {
+                  height: 0px !important;
+          }
+  }
+}
+:root[tabsintitlebar][sizemode=normal] #toolbar-menubar[autohide=true] ~ #TabsToolbar > .titlebar-placeholder[type="pre-tabs"] {
+  width: 1px!important;
+}
+
+
+/*—————————书签栏自动隐藏—————————*/
+
+
+
+/*去除无用书签右键菜单*/
+#placesContext_open,
+[command="placesCmd_open:tab"], 
+[class="openintabs-menuitem"],/*在标签页中打开书签组*/
+[id="placesContext_open:newprivatewindow"],/*在新隐私窗口中打开*/
+[id="placesContext_openContainer:tabs"]/*在标签页中打开书签组*/ {
+  display: none;
+}
+
+
+/*去除“发送到设备”右键*/
+#context-sendpagetodevice, #context-sep-sendpagetodevice,
+#context-sendlinktodevice, #context-sep-sendlinktodevice,
+#context_sendTabToDevice, #context_sendTabToDevice_separator {
+  display: none !important;
+}
+
+/*去除右键搜索*/
+#context-searchselect{
+	display: none !important;
+}
+
+/*去除无用图像右键菜单*/
+#context-setDesktopBackground,#context-sendimage,#context-viewimageinfo {
+	display: none;
+}
+
+/*隐藏所有右键菜单分割线*/
+menuseparator {
+  display: none;
+}
+
+/*去除 链接存为书签*/
+#context-bookmarklink{
+	display: none !important;
+}
