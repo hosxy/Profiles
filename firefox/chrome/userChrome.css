@@ -58,3 +58,8 @@ menuseparator {
 #context-bookmarklink{
 	display: none !important;
 }
+
+/*去除 为搜索引擎添加关键词*/
+#context-keywordfield{
+	display: none !important;
+}
