@@ -1,0 +1,25 @@
+! 设置字体，编码
+xterm*faceNameDoublesize:Noto Sans CJK SC:antialias=True:pixelsize=15 &nbsp;
+xterm*faceName:DejaVu Sans Mono for Powerline:antialias=True:pixelsize=15 &nbsp;
+xter*boldFont:Bitstream Vera Sans Mono:antialias=True:style=Bold:pixelsize=15 &nbsp;
+xterm*fontMenu*fontdefault*Label: Default &nbsp;
+XTerm*utf8Title:true
+!XTerm*cjkWidth:true
+XTerm*locale: zh_CN.UTF-8
+
+
+!设置颜色，窗口大小
+xterm*termName: xterm-256color
+xterm*foreground:white
+xterm*background:rgb:08/08/08
+xterm*geometry:60x20+700+290
+xterm*cursorBlink: true!
+
+!使用系统剪切板
+!XTerm*VT100.Translations: #override     Ctrl <KeyPress> V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n    <BtnUp>: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n    Ctrl <KeyPress> P: print() \n
+
+!使用Alt键
+XTerm*metaSendsEscape:  true
+XTerm*eightBitInput:    false
+
+
