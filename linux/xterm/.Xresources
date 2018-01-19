@@ -13,7 +13,7 @@ xterm*termName: xterm-256color
 xterm*foreground:white
 xterm*background:rgb:08/08/08
 xterm*geometry:60x20+700+290
-xterm*cursorBlink: true!
+xterm*cursorBlink: true
 
 !使用系统剪切板
 !XTerm*VT100.Translations: #override     Ctrl <KeyPress> V: insert-selection(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n    <BtnUp>: select-end(CLIPBOARD,PRIMARY,CUT_BUFFER0) \n    Ctrl <KeyPress> P: print() \n
