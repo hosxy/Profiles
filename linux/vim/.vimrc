@@ -3,6 +3,12 @@ if has('mouse')
 	set mouse -=a
 endif
 
+" 显示行号
+set number
+
+" 开启语法高亮
+syntax on
+
 " 语法配色方案
 "set background=dark
 "colorscheme solarized
@@ -11,11 +17,10 @@ colorscheme molokai
 " 高亮当前行
 set cursorline
 
-" airline 主题
-let g:airline_theme='light'
-
-" 启用patch字体
-let g:airline_powerline_fonts = 1
+" 设置tab键为4个空格
+set ts=4
+set expandtab
+set autoindent
 
 
 """"""""""""""""""""""""""""""""" GVIM """"""""""""""""""""""""""""""""""""""""""
@@ -43,9 +48,6 @@ set background=dark
 colorscheme solarized
 "colorscheme molokai
 
-" 高亮当前行
-set cursorline
-
 " 高亮当前列
 "set cursorcolumn
 
@@ -56,12 +58,7 @@ set lines=34 columns=95
 set guifont=DejaVu\ Sans\ Mono\ 12
 "set guifont=Hack\ 12
 
-" 设置tab键为4个空格
-set ts=4
-set expandtab
-set autoindent
-
-
+endif
 
 
 
@@ -121,5 +118,3 @@ let g:airline_powerline_fonts = 1
 
 """""""" Nredtree 目录树
 
-
-endif
