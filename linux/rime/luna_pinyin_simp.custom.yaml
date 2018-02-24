@@ -1,6 +1,21 @@
+#patch:
+#  engine/filters:
+#    - simplifier
+#    - uniquifier
+#    - cjk_minifier                        # 输入方案的 fitlers 内增加这一行
+#  translator/enable_charset_filter: true  
+
+
 patch:
+  switches:
+    - options: [ utf8, gbk, gb2312 ]
+      states:
+        - UTF-8
+        - GBK
+        - GB2312
+
   engine/filters:
-    - simplifier
-    - uniquifier
-    - cjk_minifier                        # 输入方案的 fitlers 内增加这一行
-  translator/enable_charset_filter: true  
+      - simplifier
+      - uniquifier
+      - charset_filter@gbk                      # 生癖字过滤
+  translator/dictionary: pinyin_simp
