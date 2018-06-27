@@ -8,14 +8,25 @@
 
 patch:
   switches:
-    - options: [ utf8, gbk, gb2312 ]
+     - name: ascii_mode
+      reset: 0
+      states: ["中文", "西文"]
+    - name: full_shape
+      states: ["半角", "全角"]
+    - name: zh_simp 
+      reset: 1
+      states: [ 漢字, 汉字 ]
+    - name: ascii_punct
+      states: ["。，", "．，"]
+      
+    - options: [ utf8, gbk ]
+      reset: 1
       states:
         - UTF-8
         - GBK
-        - GB2312
 
   engine/filters:
-      - simplifier
-      - uniquifier
-      - charset_filter@gbk                      # 生癖字过滤
+    - simplifier
+    - uniquifier
+    - charset_filter@gbk                      # 生癖字过滤
   translator/dictionary: pinyin_simp
