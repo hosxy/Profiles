@@ -29,4 +29,3 @@ patch:
     - simplifier
     - uniquifier
     - charset_filter@gbk                      # 生癖字过滤
-  translator/dictionary: luna_pinyin_simp     #pinyin_simp
