@@ -19,11 +19,11 @@ patch:
     - name: ascii_punct
       states: ["。，", "．，"]
       
-    - options: [ utf8, gbk ]
-      reset: 1
+    - options: ["gbk", "utf8"]
+      reset: 0
       states:
-        - UTF-8
         - GBK
+        - UTF-8
 
   engine/filters:
     - simplifier
