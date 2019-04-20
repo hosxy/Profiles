@@ -17,6 +17,10 @@ display: none !important;
   display: none;
 }
 
+/*去除右键前进、后退、刷新、书签菜单*/
+#context-navigation{
+	display: none !important;
+}
 
 /*去除“发送到设备”右键*/
 #context-sendpagetodevice, #context-sep-sendpagetodevice,
