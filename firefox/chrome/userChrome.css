@@ -1,20 +1,6 @@
 /*——————————57+去除左上角空白——————————*/
-#nav-bar {
-  border-top-left-radius: 0px!important;
-  border-top-right-radius: 0px!important;
-}
-[url=home.php?mod=space&uid=880893]@media[/url] (-moz-os-version: windows-win7) {
-  @media (-moz-windows-default-theme) {
-          .tab-background:not(:-moz-lwtheme):not([selected=true]) {
-                  background-color: rgba(0, 0, 0, .2) !important;
-          }
-          .tab-line {
-                  height: 0px !important;
-          }
-  }
-}
-:root[tabsintitlebar][sizemode=normal] #toolbar-menubar[autohide=true] ~ #TabsToolbar > .titlebar-placeholder[type="pre-tabs"] {
-  width: 1px!important;
+.titlebar-spacer[type="pre-tabs"] {
+display: none !important;
 }
 
 
