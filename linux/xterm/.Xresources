@@ -1,7 +1,7 @@
 ! 设置字体，编码
-xterm*faceNameDoublesize:Noto Sans CJK SC:antialias=True:pixelsize=15
-xterm*faceName:DejaVu Sans Mono for Powerline:antialias=True:pixelsize=15
-xter*boldFont:Bitstream Vera Sans Mono:antialias=True:style=Bold:pixelsize=15
+xterm*faceNameDoublesize:Source Han Sans CN Medium:antialias=True:pixelsize=15
+xterm*faceName:Fira Code Medium:antialias=True:pixelsize=15
+!xter*boldFont:Bitstream Vera Sans Mono:antialias=True:style=Bold:pixelsize=15
 xterm*fontMenu*fontdefault*Label: Default
 XTerm*utf8Title:true
 !XTerm*cjkWidth:true
