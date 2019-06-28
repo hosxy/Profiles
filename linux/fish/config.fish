@@ -1,3 +1,6 @@
+# 关闭欢迎语
+set -U fish_greeting 
+
 # 添加环境变量
 set -x PATH $PATH ~/.local/bin
 
