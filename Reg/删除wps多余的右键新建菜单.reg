@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\.doc\Word.Document.8]
+[-HKEY_CLASSES_ROOT\.ppt\PowerPoint.Show.8]
+[-HKEY_CLASSES_ROOT\.xls\Excel.Sheet.8]
