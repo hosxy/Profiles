@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+; 删除右键上传wps云文档菜单，这个在wps2016中可以关闭
+
+[-HKEY_CLASSES_ROOT\*\shellex\ContextMenuHandlers\qingshellext]
+[-HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers\qingshellext]
+[-HKEY_CLASSES_ROOT\Directory\shellex\ContextMenuHandlers\qingshellext]
+[-HKEY_CLASSES_ROOT\lnkfile\shellex\ContextMenuHandlers\qingshellext]
+[-HKEY_CURRENT_USER\Software\Classes\*\shellex\ContextMenuHandlers\qingshellext]
+[-HKEY_CURRENT_USER\Software\Classes\Directory\Background\shellex\ContextMenuHandlers\qingshellext]
+[-HKEY_CURRENT_USER\Software\Classes\Directory\shellex\ContextMenuHandlers\qingshellext]
+[-HKEY_CURRENT_USER\Software\Classes\lnkfile\shellex\ContextMenuHandlers\qingshellext]
