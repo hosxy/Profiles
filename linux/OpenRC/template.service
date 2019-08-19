@@ -11,9 +11,15 @@ command_background=true
 extra_started_commands=""
 #extra_stopped_commands=""
 
+#start_stop_daemon_args="-e "
+
 pidfile=/run/$RC_SVCNAME.pid
 
 depend(){
     
+}
+
+start_pre(){
+
 }
 
