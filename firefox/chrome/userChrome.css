@@ -1,6 +1,6 @@
 /*——————————57+去除左上角空白——————————*/
 .titlebar-spacer[type="pre-tabs"] {
-display: none !important;
+	display: none !important;
 }
 
 
@@ -14,7 +14,7 @@ display: none !important;
 [class="openintabs-menuitem"],/*在标签页中打开书签组*/
 [id="placesContext_open:newprivatewindow"],/*在新隐私窗口中打开*/
 [id="placesContext_openContainer:tabs"]/*在标签页中打开书签组*/ {
-  display: none;
+	display: none;
 }
 
 /*去除右键前进、后退、刷新、书签菜单*/
