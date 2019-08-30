@@ -53,3 +53,18 @@ menuseparator {
 #context-keywordfield{
 	display: none !important;
 }
+
+/*去除拼写检查()*/
+#spell-check-enabled {
+	display: none !important;
+}
+/*地址栏圆角*/
+#urlbar {
+	border-radius: 2em !important;
+}
+
+/*地址栏收藏按钮向左偏移 8px*/
+#star-button {
+    margin-right: 8px !important;
+}
+
