@@ -1,0 +1,20 @@
+#!/sbin/openrc-run
+#This is a v2ray openrc init script for Archlinux or Artixlinux
+
+
+command=/usr/bin/v2ray
+command_args="-config /etc/v2ray/config.json"
+port=${RC_SVCNAME#*.}
+command_background=true
+start_stop_daemon_args="-e V2RAY_LOCATION_ASSET=/etc/v2ray"
+
+pidfile=/run/${RC_SVCNAME}.pid
+
+depend(){
+    need net
+}
+
+start_pre(){
+    if [ "$port" != "$RC_SVCNAME" ]; then
+        export command_args="/etc/v2ray/${port}.json"
+}
