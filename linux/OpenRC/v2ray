@@ -17,4 +17,5 @@ depend(){
 start_pre(){
     if [ "$port" != "$RC_SVCNAME" ]; then
         export command_args="/etc/v2ray/${port}.json"
+    fi
 }
