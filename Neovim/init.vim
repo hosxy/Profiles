@@ -1,5 +1,5 @@
 " 在 windows 下设定 runtimepath(不想将数据放到 C 盘)
-" 先在 <install_directory>\share\nvim 下建立 sysinit.vim, 设置$XDG_CONFIG_HOME和$XDG_DATA_HOME,比如:
+" 先在 <nvim_install_directory>\share\nvim 下建立 sysinit.vim, 设置$XDG_CONFIG_HOME和$XDG_DATA_HOME,比如:
 " let $XDG_CONFIG_HOME="D:\\Neovim\\vimfiles-nvim"
 " let $XDG_DATA_HOME="D:\\Neovim\\vimfiles-nvim"
 " set runtimepath+=$XDG_CONFIG_HOME\nvim,$XDG_DATA_HOME\nvim-data\site
