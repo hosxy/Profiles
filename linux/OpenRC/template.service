@@ -4,19 +4,20 @@
 command=
 command_args=""
 command_background=true
+#port=${RC_SVCNAME#*.}
 #command_args_background="--daemon"
 #extra_commands=""
 #command_user="user:group"
 #extra_commands=""
-extra_started_commands=""
+#extra_started_commands=""
 #extra_stopped_commands=""
 
 #start_stop_daemon_args="-e "
 
-pidfile=/run/$RC_SVCNAME.pid
+pidfile=/run/${RC_SVCNAME}.pid
 
 depend(){
-    
+    need net
 }
 
 start_pre(){
