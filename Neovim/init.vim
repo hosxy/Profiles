@@ -2,7 +2,7 @@
 " 先在 <nvim_install_directory>\share\nvim 下建立 sysinit.vim, 设置$XDG_CONFIG_HOME和$XDG_DATA_HOME,比如:
 " let $XDG_CONFIG_HOME="D:\\Neovim\\vimfiles-nvim"
 " let $XDG_DATA_HOME="D:\\Neovim\\vimfiles-nvim"
-" set runtimepath+=$XDG_CONFIG_HOME\nvim,$XDG_DATA_HOME\nvim-data\site
+set runtimepath+=$XDG_CONFIG_HOME\nvim,$XDG_DATA_HOME\nvim-data\site
 
 " 显示行号
 set number
@@ -18,7 +18,6 @@ set expandtab
 
 " 自动缩进
 set autoindent
-set cindent
 
 " 高亮当前行
 set cursorline
@@ -61,8 +60,10 @@ call plug#end()
 " 配色方案
 set termguicolors
 let g:gruvbox_italic=1
+g:gruvbox_contrast=hard
 colorscheme gruvbox
 
 "Airline
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
