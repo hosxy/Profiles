@@ -63,7 +63,7 @@ call plug#end()
 " gruvbox 
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
-g:gruvbox_contrast=hard
+let g:gruvbox_contrast=hard
 let g:gruvbox_improved_strings=1
 
 " 配色方案
