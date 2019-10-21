@@ -59,8 +59,8 @@ call plug#end()
 " gruvbox 
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
-let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_improved_strings=1
+let g:gruvbox_contrast_dark='hard'
 
 " 配色方案
 set background=dark
@@ -68,6 +68,7 @@ colorscheme gruvbox
 
 
 "Airline
+let g:airline_theme='light'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
