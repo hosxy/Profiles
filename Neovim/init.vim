@@ -16,7 +16,8 @@ set autoindent
 " 高亮当前行
 set cursorline
 
-
+" 终端使用真彩色(guicolor)
+set termguicolors
 
 
 
@@ -57,11 +58,10 @@ call plug#end()
 " gruvbox 
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
-let g:gruvbox_contrast=hard
+let g:gruvbox_contrast='hard'
 let g:gruvbox_improved_strings=1
 
 " 配色方案
-set termguicolors
 set background=dark
 colorscheme gruvbox
 
