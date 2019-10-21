@@ -2,7 +2,7 @@
 " 先在 <nvim_install_directory>\share\nvim 下建立 sysinit.vim, 设置$XDG_CONFIG_HOME和$XDG_DATA_HOME,比如:
 " let $XDG_CONFIG_HOME="D:\\Neovim\\vimfiles-nvim"
 " let $XDG_DATA_HOME="D:\\Neovim\\vimfiles-nvim"
-set runtimepath+=$XDG_CONFIG_HOME\nvim,$XDG_DATA_HOME\nvim-data\site
+set runtimepath+=$XDG_DATA_HOME\nvim-data\site,$XDG_CONFIG_HOME\nvim
 
 " 显示行号
 set number
@@ -51,19 +51,31 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
 
+" sudo 保存(Unix-like Only)
+" Plug 'lambdalisue/suda.vim'
 
 call plug#end()
 
 
 
-"""""""""""""""""""""""""""""""""  Confugre  """""""""""""""""""""""""""
-" 配色方案
-set termguicolors
+"""""""""""""""""""""""""""""""""  Configure  """""""""""""""""""""""""""
+
+" gruvbox 
+let g:gruvbox_bold=1
 let g:gruvbox_italic=1
 g:gruvbox_contrast=hard
+let g:gruvbox_improved_strings=1
+
+" 配色方案
+set termguicolors
+set background=dark
 colorscheme gruvbox
+
 
 "Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+
+" 以 root 权限保存文件
+" cmap w!! w suda://%
