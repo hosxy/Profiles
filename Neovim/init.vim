@@ -24,8 +24,8 @@ set termguicolors
 
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
 
-call plug#begin('~/.local/share/nvim/plugged')
-" call plug#begin('$XDG_DATA_HOME\\nvim-data\\plugged')
+call plug#begin('~/.local/share/nvim/plugged')              " for Unix-like
+" call plug#begin('$XDG_DATA_HOME\\nvim-data\\plugged')     " for Windows
 
 " 主题
 Plug 'morhetz/gruvbox'
