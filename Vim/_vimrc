@@ -1,4 +1,5 @@
 set encoding=utf-8
+let $HOME=$VIM\\vimfiles
 
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
 
