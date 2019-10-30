@@ -1,0 +1,102 @@
+set encoding=utf-8
+
+""""""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
+
+
+call plug#begin('$VIM\vimfiles\plugged')
+
+" 配色主题
+Plug 'morhetz/gruvbox'
+
+" 自动补全括号等
+Plug 'jiangmiao/auto-pairs'
+
+" 缩进指示线
+Plug 'Yggdroot/indentLine'
+
+" 自动保存
+Plug '907th/vim-auto-save'
+
+" 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" 语法高亮
+Plug 'rust-lang/rust.vim'
+
+" 目录树
+Plug 'scrooloose/nerdtree'
+
+" 中文文档翻译
+Plug 'yianwillis/vimcdoc'
+
+call plug#end()
+
+
+""""""""""""""""""""""""""""""""""""""""""" Configure """"""""""""""""""""""""""""""""""""""""
+" 关闭VI兼容模式，备份，
+set nocompatible
+set nobackup
+set noswapfile
+
+" 改变 viminfo 默认位置
+set viminfo+=n$VIM\\vimfiles\\viminfo
+
+" 开启行号
+set number
+
+" 高亮当前行
+set cursorline
+
+" 定义退格键行为
+set backspace=indent,eol,start
+
+" 开启语法高亮
+syntax on
+
+" 文件类型相关
+filetype plugin on
+filetype indent on
+
+" 设置tab键为4个空格
+set ts=4
+set expandtab
+set autoindent
+
+" gruvbox
+let g:gruvbox_bold=1
+let g:gruvbox_italic=1
+let g:gruvbox_improved_strings=1
+let g:gruvbox_contrast_dark='hard'
+
+" 配色方案
+set background=dark
+colorscheme gruvbox
+
+
+"""""""""""""""""""" AirLine
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='light'
+"显示 buffer 编号
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+
+""""""""""""""""""""""NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" 最后是个 window 是 NERDTree 时自动退出
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let NERDTreeWinSize=25
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""" Key Map """"""""""""""""""""""""""""""""""""""""
+"切换 buffer
+nnoremap <F8> :bp<CR>
+nnoremap <F9> :bn<CR>
+
