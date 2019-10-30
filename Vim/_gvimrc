@@ -1,0 +1,34 @@
+set encoding=utf-8
+
+set guifont=等距更纱黑体_T_SC_Semibold:h12
+"set guifontwide=等距更纱黑体_SC_Semibold:h12
+
+"hi LineNr gui=bold
+"hi CursorLineNr gui=bold
+
+"set iminsert=2
+
+" 隐藏工具栏
+set guioptions-=T
+
+" 隐藏菜单栏
+set guioptions-=m
+
+" 隐藏Tab栏
+"set showtabline=0 
+
+" 隐藏左侧滚动条
+set guioptions-=L 
+
+" 隐藏左侧滚动条
+set guioptions-=r
+
+" 设置初始界面位置
+winpos 300 10
+
+" 设置窗口大小
+set lines=50 columns=135
+
+" 关闭提示(警告)音
+set vb t_vb=
+
