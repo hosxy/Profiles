@@ -57,10 +57,6 @@ set backspace=indent,eol,start
 " 开启语法高亮
 syntax on
 
-" 文件类型相关
-filetype plugin on
-filetype indent on
-
 " 设置tab键为4个空格
 set ts=4
 set expandtab
