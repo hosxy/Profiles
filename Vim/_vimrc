@@ -42,7 +42,7 @@ set nocompatible
 set nobackup
 set noswapfile
 
-" 改变 viminfo 默认位置(必须在 set nocompatible 后面,改变 HOME 位置后 viminfo 位置也跟着一起改变，不用设置了)
+" 改变 viminfo 默认位置(必须在 set nocompatible 后面,改变 HOME 位置后 viminfo 位置也会随之改变，不用设置了)
 "set viminfo+=n$VIM\\vimfiles\\viminfo
 
 " 开启行号
