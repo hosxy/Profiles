@@ -1,10 +1,12 @@
 set encoding=utf-8
-let $HOME=$VIM\\vimfiles
+
+" 改变 HOME 位置
+let $HOME=$VIM."\\vimfiles"
 
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
 
 
-call plug#begin('$VIM\vimfiles\plugged')
+call plug#begin('$HOME\\plugged')
 
 " 配色主题
 Plug 'morhetz/gruvbox'
@@ -40,8 +42,8 @@ set nocompatible
 set nobackup
 set noswapfile
 
-" 改变 viminfo 默认位置
-set viminfo+=n$VIM\\vimfiles\\viminfo
+" 改变 viminfo 默认位置(必须在 set nocompatible 后面,改变 HOME 位置后 viminfo 位置也跟着一起改变，不用设置了)
+"set viminfo+=n$VIM\\vimfiles\\viminfo
 
 " 开启行号
 set number
@@ -75,6 +77,11 @@ set background=dark
 colorscheme gruvbox
 
 
+""""""""""""""""""""""""" Auto-Save
+let g:auto_save = 1
+let g:auto_save_events=["InsertLeave","FocusLost"]
+
+
 """""""""""""""""""" AirLine
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -83,7 +90,7 @@ let g:airline_theme='light'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 
-""""""""""""""""""""""NERDTree
+"""""""""""""""""""""" NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " 最后是个 window 是 NERDTree 时自动退出
