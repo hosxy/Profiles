@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-; 删除右键新建菜单中的 doc，ppt，xls，保留 docx，pptx，xlsx
-
-[-HKEY_CLASSES_ROOT\.doc\Word.Document.8]
-[-HKEY_CLASSES_ROOT\.ppt\PowerPoint.Show.8]
-[-HKEY_CLASSES_ROOT\.xls\Excel.Sheet.8]
