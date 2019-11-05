@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; 删除右键新建菜单中的 bmp 和 rtf 
+
+[-HKEY_CLASSES_ROOT\.bmp\ShellNew]
+[-HKEY_CLASSES_ROOT\.rtf\ShellNew]
