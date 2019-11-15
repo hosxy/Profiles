@@ -1,12 +1,37 @@
 set encoding=utf-8
 
-" 改变 HOME 位置
-let $HOME=$VIM."\\vimfiles"
+" 关闭 VI 兼容模式
+set nocompatible
+
+if has("win32")
+    " 改变 HOME 位置
+    let $HOME=$VIM."\\vimfiles"
+    
+    " 设定 vim-plug 插件存放目录
+    let $PlugPath=$HOME."\\plugged"
+    
+    " 定义退格键行为
+    set backspace=indent,eol,start
+else
+    " 添加 XDG 标准目录到 vim 的 runtimepath
+    set runtimepath+=$XDG_DATA_HOME/vim
+    set packpath+=$XDG_DATA_HOME/vim
+    
+    " 使用 XDG 规范目录
+    set undodir=$XDG_DATA_HOME/vim/undo
+    set backupdir=$XDG_DATA_HOME/vim/backup
+    set directory=$XDG_DATA_HOME/vim/swap
+    set viminfo+=n$XDG_DATA_HOME/vim/viminfo     " 必须放在 set nocompatible 后面
+    
+    " 设定 vim-plug 插件存放目录
+    let $PlugPath=$XDG_DATA_HOME."/vim/plugged"
+
+endif
 
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
 
 
-call plug#begin('$HOME\\plugged')
+call plug#begin('$PlugPath')
 
 " 配色主题
 Plug 'morhetz/gruvbox'
@@ -26,6 +51,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " 语法高亮
 Plug 'rust-lang/rust.vim'
+Plug 'dag/vim-fish'
 
 " 目录树
 Plug 'scrooloose/nerdtree'
@@ -37,30 +63,32 @@ call plug#end()
 
 
 """"""""""""""""""""""""""""""""""""""""""" Configure """"""""""""""""""""""""""""""""""""""""
-" 关闭VI兼容模式，备份，
-set nocompatible
+" 关闭自动备份，
 set nobackup
-set noswapfile
 
-" 改变 viminfo 默认位置(必须在 set nocompatible 后面,改变 HOME 位置后 viminfo 位置也会随之改变，不用设置了)
-"set viminfo+=n$VIM\\vimfiles\\viminfo
-
-" 开启行号
+" 显示行号
 set number
-
-" 高亮当前行
-set cursorline
-
-" 定义退格键行为
-set backspace=indent,eol,start
 
 " 开启语法高亮
 syntax on
 
+" 高亮当前行
+set cursorline
+
 " 设置tab键为4个空格
-set ts=4
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
+
+" 自动缩进
 set autoindent
+
+" 终端使用真彩色(guicolor)
+set termguicolors
+
+" 开启鼠标
+set mouse=a
 
 " gruvbox
 let g:gruvbox_bold=1
@@ -92,7 +120,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " 最后是个 window 是 NERDTree 时自动退出
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-let NERDTreeWinSize=25
+let NERDTreeWinSize=20
 
 
 
@@ -104,3 +132,5 @@ let NERDTreeWinSize=25
 nnoremap <F8> :bp<CR>
 nnoremap <F9> :bn<CR>
 
+" sudo 保存文件
+cmap w!! w !sudo tee %
