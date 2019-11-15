@@ -1,6 +1,7 @@
 set encoding=utf-8
 
 set guifont=等距更纱黑体_T_SC_Semibold:h12
+"set guifont=Sarasa\ Mono\ T\ SC\ \Semibold\ 12
 "set guifontwide=等距更纱黑体_SC_Semibold:h12
 
 "hi LineNr gui=bold
