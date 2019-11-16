@@ -32,7 +32,12 @@ Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 
 " sudo 保存(Unix-like Only)
-" Plug 'lambdalisue/suda.vim'
+"Plug 'lambdalisue/suda.vim'
+
+" vim中文文档翻译
+"Plug 'yianwillis/vimcdoc'
+
+
 
 call plug#end()
 
