@@ -96,6 +96,10 @@ let NERDTreeWinSize=20
 nnoremap <F8> :bp<CR>
 nnoremap <F9> :bn<CR>
 
-
 " 以 root 权限保存文件
 cmap w!! w suda://%
+
+if has("win32")
+    " windows 下取消
+    cunmap w!!
+endif
