@@ -1,8 +1,12 @@
+if has("win32")
+    let $PlugPath=$XDG_DATA_HOME."\\nvim-data\\plugged"
+else
+    let $PlugPath=$HOME."/.local/share/nvim/plugged"
+end
 
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
 
-call plug#begin('~/.local/share/nvim/plugged')              " for Unix-like
-" call plug#begin('$XDG_DATA_HOME\\nvim-data\\plugged')     " for Windows
+call plug#begin('$PlugPath')
 
 " 主题
 Plug 'morhetz/gruvbox'
