@@ -2,7 +2,7 @@ if has("win32")
     let $PlugPath=$XDG_DATA_HOME."\\nvim-data\\plugged"
 else
     let $PlugPath=$HOME."/.local/share/nvim/plugged"
-end
+endif
 
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
 
