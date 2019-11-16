@@ -68,6 +68,10 @@ set termguicolors
 " 开启鼠标支持
 set mouse=a
 
+" 设置默认进行大小写不敏感查找,如果有包含大写字母则进行大小写敏感查找
+set ignorecase
+set smartcase
+
 """"""""""""""""""""""""""""""""""""" gruvbox 
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
