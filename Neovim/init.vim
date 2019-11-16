@@ -1,26 +1,3 @@
-" 显示行号
-set number
-
-" 语法高亮
-syntax on
-
-" Tab键的宽度
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-
-" 自动缩进
-set autoindent
-
-" 高亮当前行
-set cursorline
-
-" 终端使用真彩色(guicolor)
-set termguicolors
-
-
-
 
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
 
@@ -47,6 +24,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dag/vim-fish'
 Plug 'rust-lang/rust.vim'
 
+" 目录树
+Plug 'scrooloose/nerdtree'
+
 " sudo 保存(Unix-like Only)
 " Plug 'lambdalisue/suda.vim'
 
@@ -55,23 +35,67 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""  Configure  """""""""""""""""""""""""""
+" 显示行号
+set number
 
-" gruvbox 
+" 语法高亮
+syntax on
+
+" Tab键的宽度
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+
+" 自动缩进
+set autoindent
+
+" 高亮当前行
+set cursorline
+
+" 终端使用真彩色(guicolor)
+set termguicolors
+
+" 开启鼠标支持
+set mouse=a
+
+""""""""""""""""""""""""""""""""""""" gruvbox 
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
-let g:gruvbox_improved_strings=1
 let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_improved_strings=1
 
 " 配色方案
 set background=dark
 colorscheme gruvbox
 
 
-"Airline
-let g:airline_theme='light'
-let g:airline_powerline_fonts = 1
+""""""""""""""""""""""""""""""""""""" Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='light'
+"显示 buffer 编号
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+
+""""""""""""""""""""""""""""""""""""" NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" 最后是个 window 是 NERDTree 时自动退出
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let NERDTreeWinSize=20
+
+
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""" Key Map """"""""""""""""""""""""""""""""""""""""
+"切换 buffer
+nnoremap <F8> :bp<CR>
+nnoremap <F9> :bn<CR>
 
 
 " 以 root 权限保存文件
-" cmap w!! w suda://%
+cmap w!! w suda://%
