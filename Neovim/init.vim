@@ -1,5 +1,8 @@
 if has("win32")
     let $PlugPath=$XDG_DATA_HOME."\\nvim-data\\plugged"
+    
+    " 改变 swapfile 文件位置 
+    set directory=$XDG_DATA_HOME\\nvim-data\\swap
 else
     let $PlugPath=$HOME."/.local/share/nvim/plugged"
 endif
