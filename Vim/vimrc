@@ -83,6 +83,7 @@ set expandtab
 
 " 自动缩进
 set autoindent
+set smartindent
 
 " 终端使用真彩色(guicolor)
 set termguicolors
