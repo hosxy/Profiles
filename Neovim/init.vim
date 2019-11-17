@@ -61,6 +61,7 @@ set expandtab
 
 " 自动缩进
 set autoindent
+set smartindent
 
 " 高亮当前行
 set cursorline
