@@ -27,8 +27,10 @@ patch:
     import_preset: symbols
     full_shape:
       "\\" : "、"
+      "#" : "#"
     half_shape:
       "\\" : "、"
+      "#" : "#"
       
   recognizer:
     patterns:
