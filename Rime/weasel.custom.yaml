@@ -1,0 +1,67 @@
+#Custom File Create By RimeControl On 2019-04-20 19:15:14
+#如果修改，请认真阅读 Rime定製指南 https://github.com/rime/home/wiki/CustomizationGuide 的要求！！
+patch: 
+  app_options/putty.exe:                    #putty中默认使用英文
+    ascii_mode: true
+  app_options/mintty.exe:                   #msys中默认使用英文
+    ascii_mode: true
+  app_options/gvim.exe:                     #gvim中默认使用英文
+    ascii_mode: true
+  app_options/WindowsTerminal.exe:          #Windows Terminal中默认使用英文
+    ascii_mode: true
+  app_options/sublime_text.exe:             #sublime_text 中默认使用英文
+    ascii_mode: true
+  app_options/nvim-qt.exe:                  #Neovim-qt中默认使用英文
+    ascii_mode: true
+  app_options/alacritty.exe:                #Alacritty中默认使用英文
+    ascii_mode: true
+    
+  "style/font_face": "Microsoft YaHei"
+  "style/font_point": 14
+  "style/horizontal": true
+  "style/inline_preedit": true
+  "style/layout/border_width": 2            #边框宽度
+  "style/layout/margin_x": 8                #候选字左右边距
+  "style/layout/margin_y": 8                #候选字上下边距
+  "style/layout/hilite_padding": 8          #候选字背景色色块高度，当和候选字上下边距一致时，可实现无边框
+  "style/layout/candidate_spacing": 20      #候选字间隔
+  "style/layout/hilite_spacing": 3          #序号和候选字之间的间隔
+  "style/color_scheme": z_Pink
+  "style/display_tray_icon": false
+  "style/fullscreen": false
+  "preset_color_schemes/z_Pink": 
+    name: 粉红
+    author: hosxy
+    back_color: 0xFFFFFF
+    border_color: 0x631EE9
+    text_color: 0x9262F0
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xFFFFFF
+    hilited_candidate_back_color: 0x631EE9
+    hilited_candidate_text_color: 0xFFFFF0
+    candidate_text_color: 0x000000
+    comment_text_color: 0x000000
+  "preset_color_schemes/z_deepOrange": 
+    name: 深橙色
+    author: hosxy
+    back_color: 0xFFFFFF
+    border_color: 0x631EE9
+    text_color: 0x9262F0
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xFFFFFF
+    hilited_candidate_back_color: 0x194AE6
+    hilited_candidate_text_color: 0xFFFFF0
+    candidate_text_color: 0x000000
+    comment_text_color: 0x000000
+  "preset_color_schemes/z_purpose": 
+    name: 紫色
+    author: skoj <skoj@qq.com>
+    back_color: 0xFFFFFF
+    border_color: 0xCC3299
+    text_color: 0x666666
+    hilited_text_color: 0x000000
+    hilited_back_color: 0xFFFFFF
+    hilited_candidate_back_color: 0xCC3299
+    hilited_candidate_text_color: 0xFFFFFF
+    candidate_text_color: 0x000000
+    comment_text_color: 0x000000
