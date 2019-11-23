@@ -1,0 +1,39 @@
+patch:
+   
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 中文, 西文 ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: zh_simp                                     # 简繁转换
+      reset: 1
+      states: [ 漢字, 汉字 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
+    - options: ["gbk","utf8"]               # 字符集选单
+      reset: 0                                          # 默认 GBK
+      states:
+        - GBK
+#        - GBK+Emoji
+        - UTF-8
+  
+  simplifier:                                           # 使用简体中文
+    option_name: zh_simp
+    
+  engine/filters:
+    - simplifier
+    - uniquifier
+    - charset_filter@gbk
+#    - charset_filter@gbk+emoji                           # GBK过滤
+    
+  punctuator:
+    import_preset: symbols
+    full_shape:
+      "\\" : "、"
+    half_shape:
+      "\\" : "、"
+      
+  recognizer:
+    patterns:
+      punct: "^/([A-Z|a-z]*|[0-9]|10)$"
