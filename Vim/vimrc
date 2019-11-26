@@ -92,7 +92,7 @@ set termguicolors
 set mouse=a
 
 " 使用系统剪切版
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " gruvbox
 let g:gruvbox_bold=1
