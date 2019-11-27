@@ -3,8 +3,8 @@ XDG_CONFIG_HOME                 DEFAULT=@{HOME}/.config
 XDG_DATA_HOME                   DEFAULT=@{HOME}/.local/share
 XDG_CACHE_HOME                  DEFAULT=@{HOME}/.cache
 
-#
-PATH $PATH                      DEFAULT=$PATH:@{HOME}/.local/bin
+# 修改 PATH
+PATH                            DEFAULT=$PATH:@{HOME}/.local/bin
 
 # 输入法相关
 GTK_IM_MODULE                   DEFAULT=fcitx
