@@ -1,0 +1,41 @@
+# 设定 XDG 相关目录
+XDG_CONFIG_HOME                 DEFAULT=@{HOME}/.config
+XDG_DATA_HOME                   DEFAULT=@{HOME}/.local/share
+XDG_CACHE_HOME                  DEFAULT=@{HOME}/.cache
+
+#
+PATH $PATH                      DEFAULT=$PATH:@{HOME}/.local/bin
+
+# 输入法相关
+GTK_IM_MODULE                   DEFAULT=fcitx
+QT_IM_MODULE                    DEFAULT=fcitx
+XMODIFIERS                      DEFAULT=@im=fcitx
+
+# intel硬解驱动
+LIBVA_DRIVER_NAME               DEFAULT=iHD
+
+
+################################################## dotfile ####################################
+
+# XAUTHORITY
+XAUTHORITY                      DEFAULT=${XDG_CACHE_HOME}/Xauthority
+
+#GTK2
+GTK2_RC_FILES                   DEFAULT=${XDG_CONFIG_HOME}/gtk-2.0/gtkrc
+
+# 安卓
+ANDROID_SDK_HOME                DEFAULT=${XDG_CONFIG_HOME}/android
+
+# GPG
+GNUPGHOME                       DEFAULT=${XDG_DATA_HOME}/gnupg
+
+# weechat
+WEECHAT_HOME                    DEFAULT=${XDG_DATA_HOME}/weechat 
+
+# bash
+HISTFILE                        DEFAULT=${XDG_DATA_HOME}/bash/history
+BASH_COMPLETION_USER_FILE       DEFAULT=${XDG_DATA_HOME}/bash/bash_completion
+
+# vim
+#VIMINIT                         DEFAULT=:source ${XDG_CONFIG_HOME}/vim/vimrc
+#GVIMINIT                        DEFAULT=:source ${XDG_CONFIG_HOME}/vim/gvimrc
