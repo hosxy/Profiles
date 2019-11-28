@@ -6,7 +6,7 @@ command=/usr/bin/v2ray
 command_args="-config /etc/v2ray/config.json"
 port=${RC_SVCNAME#*.}
 command_background=true
-start_stop_daemon_args="-e V2RAY_LOCATION_ASSET=/etc/v2ray"
+#start_stop_daemon_args="-e V2RAY_LOCATION_ASSET=/etc/v2ray"
 
 pidfile=/run/${RC_SVCNAME}.pid
 
