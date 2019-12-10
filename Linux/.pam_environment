@@ -18,7 +18,8 @@ LIBVA_DRIVER_NAME               DEFAULT=iHD
 ################################################## dotfile ####################################
 
 # XAUTHORITY
-XAUTHORITY                      DEFAULT=${XDG_CACHE_HOME}/Xauthority
+XAUTHORITY                      DEFAULT=${XDG_RUNTIME_DIR}/Xauthority
+ICEAUTHORITY                    DEFAULT=${XDG_RUNTIME_DIR}/ICEauthority
 
 #GTK2
 GTK2_RC_FILES                   DEFAULT=${XDG_CONFIG_HOME}/gtk-2.0/gtkrc
