@@ -5,10 +5,15 @@ set nocompatible
 
 if has("win32")
     " 改变 HOME 位置
-    let $HOME=$VIM."\\vimfiles"
-    
+    let $VIMFILES=$VIM."\\vimfiles"
+   
+    " 规范目录
+    set undodir=$VIMFILES\\temp\\undo
+    set backupdir=$VIMFILES\\temp\\backup
+    set directory=$VIMFILES\\temp\\swap
+
     " 设定 vim-plug 插件存放目录
-    let $PlugPath=$HOME."\\plugged"
+    let $PlugPath=$VIMFILES."\\plugged" 
     
     " 定义退格键行为
     set backspace=indent,eol,start
@@ -45,7 +50,7 @@ Plug 'Yggdroot/indentLine'
 " 自动保存
 Plug '907th/vim-auto-save'
 
-" 
+" 美化状态栏
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -88,13 +93,18 @@ set smartindent
 " 终端使用真彩色(guicolor)
 set termguicolors
 
+" 设置默认进行大小写不敏感查找,如果有包含大写字母则进行大小写敏感查找
+set ignorecase
+set smartcase
+
 " 开启鼠标
 set mouse=a
 
 " 使用系统剪切版
 set clipboard=unnamedplus
 
-" gruvbox
+
+""""""""""""""""""""""""" gruvbox
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
 let g:gruvbox_improved_strings=1
