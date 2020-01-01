@@ -32,9 +32,11 @@ patch:
     full_shape:
       "\\" : "、"
       "#" : "#"
+      "@" : "@"
     half_shape:
       "\\" : "、"
       "#" : "#"
+      "@" : "@"
       
   recognizer:
     patterns:
