@@ -17,26 +17,37 @@ LIBVA_DRIVER_NAME               DEFAULT=iHD
 
 ################################################## dotfile ####################################
 
-# XAUTHORITY
-XAUTHORITY                      DEFAULT=${XDG_RUNTIME_DIR}/Xauthority
-ICEAUTHORITY                    DEFAULT=${XDG_RUNTIME_DIR}/ICEauthority
-
-#GTK2
-GTK2_RC_FILES                   DEFAULT=${XDG_CONFIG_HOME}/gtk-2.0/gtkrc
-
 # 安卓
 ANDROID_SDK_HOME                DEFAULT=${XDG_CONFIG_HOME}/android
+
+# Bash
+HISTFILE                        DEFAULT=${XDG_DATA_HOME}/bash/history
+BASH_COMPLETION_USER_FILE       DEFAULT=${XDG_DATA_HOME}/bash/bash_completion
 
 # GPG
 GNUPGHOME                       DEFAULT=${XDG_DATA_HOME}/gnupg
 
-# weechat
-WEECHAT_HOME                    DEFAULT=${XDG_DATA_HOME}/weechat 
+# Gnome User Dir
+gnome_user_dir                  DEFAULT=${XDG_DATA_HOME}/gnome
 
-# bash
-HISTFILE                        DEFAULT=${XDG_DATA_HOME}/bash/history
-BASH_COMPLETION_USER_FILE       DEFAULT=${XDG_DATA_HOME}/bash/bash_completion
+# GTK2
+GTK2_RC_FILES                   DEFAULT=${XDG_CONFIG_HOME}/gtk-2.0/gtkrc
 
-# vim
-#VIMINIT                         DEFAULT=:source ${XDG_CONFIG_HOME}/vim/vimrc
-#GVIMINIT                        DEFAULT=:source ${XDG_CONFIG_HOME}/vim/gvimrc
+#QT
+QT_STYLE_OVERRIDE               DEFAULT=kvantum
+
+# Rust
+CARGO_HOME                      DEFAULT=${XDG_DATA_HOME}/Rust/Cargo
+RUSTUP_HOME                     DEFAULT=${XDG_DATA_HOME}/Rust/Rustup
+RUSTUP_DIST_SERVER              DEFAULT=https://mirrors.tuna.tsinghua.edu.cn/rustup
+
+# Vim
+VIMINIT                         DEFAULT=":source ${XDG_CONFIG_HOME}/vim/vimrc"
+GVIMINIT                        DEFAULT=":source ${XDG_CONFIG_HOME}/vim/gvimrc"
+
+# Weechat
+WEECHAT_HOME                    DEFAULT=${XDG_DATA_HOME}/weechat
+
+# XAUTHORITY
+XAUTHORITY                      DEFAULT=${XDG_RUNTIME_DIR}/Xauthority
+ICEAUTHORITY                    DEFAULT=${XDG_RUNTIME_DIR}/ICEauthority
