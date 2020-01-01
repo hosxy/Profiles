@@ -4,7 +4,7 @@ XDG_DATA_HOME                   DEFAULT=@{HOME}/.local/share
 XDG_CACHE_HOME                  DEFAULT=@{HOME}/.cache
 
 # 修改 PATH
-PATH                            DEFAULT=$PATH:@{HOME}/.local/bin
+PATH                            DEFAULT=$PATH:@{HOME}/.local/bin:${XDG_DATA_HOME}/Rust/Cargo/bin
 
 # 输入法相关
 GTK_IM_MODULE                   DEFAULT=fcitx
