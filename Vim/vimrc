@@ -148,3 +148,10 @@ nnoremap <F9> :bn<CR>
 
 " sudo 保存文件
 cmap w!! w !sudo tee %
+
+" 终端下插入模式光标形状为竖线
+if &term =~ "xterm"
+	let &t_SI = "\e[5 q"
+	let &t_SR = "\e[6 q"    
+	let &t_EI = "\e[2 q" 
+endif
