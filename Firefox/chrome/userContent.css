@@ -1,0 +1,6 @@
+@-moz-document url(about:newtab) {
+	/*about:newtab 搜索框圆角*/
+	#newtab-search-text, #searchSubmit {
+		border-radius: 2em !important;
+	}
+}
