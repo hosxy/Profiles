@@ -4,38 +4,30 @@ set encoding=utf-8
 set nocompatible
 
 if has("win32")
-    " 改变 HOME 位置
-    let $VIMFILES=$VIM."\\vimfiles"
+    " 设置 VIM 数据目录
+    let $VIM_DATA_HOME=$VIM."/vimfiles"
    
-    " 规范目录
-    set undodir=$VIMFILES\\temp\\undo
-    set backupdir=$VIMFILES\\temp\\backup
-    set directory=$VIMFILES\\temp\\swap
-
-    " 设定 vim-plug 插件存放目录
-    let $PlugPath=$VIMFILES."\\plugged" 
-    
     " 定义退格键行为
     set backspace=indent,eol,start
 else
+	" 设置 VIM 数据目录
+    let $VIM_DATA_HOME=$XDG_DATA_HOME."/vim"
+	
     " 添加 XDG 标准目录到 vim 的 runtimepath
-    set runtimepath+=$XDG_DATA_HOME/vim
-    set packpath+=$XDG_DATA_HOME/vim
-    
-    " 使用 XDG 规范目录
-    set undodir=$XDG_DATA_HOME/vim/undo
-    set backupdir=$XDG_DATA_HOME/vim/backup
-    set directory=$XDG_DATA_HOME/vim/swap
-    set viminfo+=n$XDG_DATA_HOME/vim/viminfo     " 必须放在 set nocompatible 后面
-    
-    " 设定 vim-plug 插件存放目录
-    let $PlugPath=$XDG_DATA_HOME."/vim/plugged"
-
+    set runtimepath+=$VIM_DATA_HOME
+    set packpath+=$VIM_DATA_HOME
 endif
 
+" 规范目录
+set undodir=$VIM_DATA_HOME/temp/undo
+set backupdir=$VIM_DATA_HOME/temp/backup
+set directory=$VIM_DATA_HOME/temp/swap
+set viminfo+=n$VIM_DATA_HOME/viminfo				" 必须放在 set nocompatible 后面
+
+" 设定 vim-plug 插件存放目录
+let $PlugPath=$VIM_DATA_HOME."/plugged"
+
 """"""""""""""""""""""""""""""""""  Install Plugin """"""""""""""""""""""""
-
-
 call plug#begin('$PlugPath')
 
 " 配色主题
@@ -63,6 +55,9 @@ Plug 'scrooloose/nerdtree'
 
 " 中文文档翻译
 Plug 'yianwillis/vimcdoc'
+
+" VIM 内置终端快捷操作
+Plug 'skywind3000/vim-terminal-help'
 
 call plug#end()
 
