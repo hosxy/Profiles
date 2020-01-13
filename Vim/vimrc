@@ -43,8 +43,8 @@ Plug 'Yggdroot/indentLine'
 Plug '907th/vim-auto-save'
 
 " 美化状态栏
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " 语法高亮
 Plug 'rust-lang/rust.vim'
@@ -116,11 +116,22 @@ let g:auto_save_events=["InsertLeave","FocusLost"]
 
 
 """""""""""""""""""" AirLine
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='light'
-"显示 buffer 编号
-let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:lightline = {'colorscheme': 'one',}
+let g:lightline.separator = {'left': '', 'right': ''}
+let g:lightline.subseparator = {'left': '', 'right': ''}
+
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+
+set showtabline=2
+let g:lightline#bufferline#filename_modifier = ':t'       " only filename, no path
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 1
+let g:lightline#bufferline#unnamed      = '[No Name]'
+let g:lightline#bufferline#unicode_symbols = 1
+let g:lightline#bufferline#enable_devicons = 1
+
 
 
 """""""""""""""""""""""""" IndentLine
