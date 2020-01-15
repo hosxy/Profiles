@@ -16,6 +16,7 @@ set guioptions-=T
 set guioptions-=m
 
 " 隐藏Tab栏
+set guioptions-=e
 "set showtabline=0 
 
 " 隐藏左侧滚动条
