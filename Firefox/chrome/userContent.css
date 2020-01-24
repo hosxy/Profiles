@@ -4,3 +4,10 @@
 		border-radius: 2em !important;
 	}
 }
+
+@-moz-document url(about:addons) {
+	/*about:addons 隐藏推荐*/
+	#category-discover {
+		display: none !important;
+	}
+}
