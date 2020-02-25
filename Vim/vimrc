@@ -24,6 +24,8 @@ set backupdir=$VIM_DATA_HOME/temp/backup
 set directory=$VIM_DATA_HOME/temp/swap
 set viminfo+=n$VIM_DATA_HOME/viminfo				" 必须放在 set nocompatible 后面
 
+let g:netrw_home = $VIM_DATA_HOME."/temp/netrw_home"
+
 " 设定 vim-plug 插件存放目录
 let $PlugPath=$VIM_DATA_HOME."/plugged"
 
@@ -51,7 +53,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'dag/vim-fish'
 
 " 目录树
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 
 " 中文文档翻译
 Plug 'yianwillis/vimcdoc'
@@ -99,6 +101,12 @@ set mouse=a
 set clipboard=unnamedplus
 
 
+"=========================================== Netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 18
+
+
 """"""""""""""""""""""""" gruvbox
 let g:gruvbox_bold=1
 let g:gruvbox_italic=1
@@ -115,7 +123,7 @@ let g:auto_save = 1
 let g:auto_save_events=["InsertLeave","FocusLost"]
 
 
-"""""""""""""""""""" AirLine
+"""""""""""""""""""" Lightline
 let g:lightline = {'colorscheme': 'one',}
 let g:lightline.separator = {'left': '', 'right': ''}
 let g:lightline.subseparator = {'left': '', 'right': ''}
@@ -128,7 +136,7 @@ set showtabline=2
 let g:lightline#bufferline#filename_modifier = ':t'       " only filename, no path
 let g:lightline#bufferline#show_number  = 1
 let g:lightline#bufferline#shorten_path = 1
-let g:lightline#bufferline#unnamed      = '[No Name]'
+let g:lightline#bufferline#unnamed      = '[未命名]'
 let g:lightline#bufferline#unicode_symbols = 1
 let g:lightline#bufferline#enable_devicons = 1
 
@@ -139,15 +147,20 @@ let g:indentLine_concealcursor = ''
 let g:indentLine_conceallevel = 1
 
 
-"""""""""""""""""""""" NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" 最后是个 window 是 NERDTree 时自动退出
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"=========================================== NERDTree
+"autocmd StdinReadPre * let s:std_in = 1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" 最后一个 window 是 NERDTree 时自动退出
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-let NERDTreeWinSize=20
+"let NERDTreeWinSize = 23
 
 
+"============================================ vim-terminal-help
+"关闭vim时，自动结束终端进程
+let g:terminal_kill = 'term'
+" 在缓冲区列表里隐藏
+let g:terminal_list = 0
 
 
 
