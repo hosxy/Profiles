@@ -61,6 +61,10 @@ Plug 'yianwillis/vimcdoc'
 " VIM 内置终端快捷操作
 Plug 'skywind3000/vim-terminal-help'
 
+" 异步构建运行
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim'
+
 call plug#end()
 
 
@@ -105,6 +109,8 @@ set clipboard=unnamedplus
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 18
+"关闭 netrw 的映射 
+let g:netrw_mousemaps= 0
 
 
 """"""""""""""""""""""""" gruvbox
@@ -163,12 +169,28 @@ let g:terminal_kill = 'term'
 let g:terminal_list = 0
 
 
+"============================================ AsyncRun
+
+
+"============================================ AsyncTask
+"
+let g:asynctasks_extra_config = ['D:\Vim\vimfiles\AsyncTasks.ini']
+"
+let g:asynctasks_term_pos = 'bottom'
+
+let g:asyncrun_rootmarks = ['.git', '.svn', '.root', '.project', '.hg']
+"
+let g:asynctasks_term_hidden = 1
+
 
 
 """""""""""""""""""""""""""""""""""""""" Key Map """"""""""""""""""""""""""""""""""""""""
 "切换 buffer
 nnoremap <F8> :bp<CR>
 nnoremap <F9> :bn<CR>
+
+
+noremap <silent><F6> :AsyncTask project-run<CR>
 
 " sudo 保存文件
 cmap w!! w !sudo tee %
