@@ -17,9 +17,9 @@ patch:
     - schema: luna_pinyin_simp
     
   ascii_composer:
-    good_old_caps_lock: true
+    good_old_caps_lock: true                  # 打开 Caps 后输入字母为大写字母
     switch_key:
-      Caps_Lock: clear
+      Caps_Lock: commit_code
       Control_L: commit_code
       Control_R: noop
       Shift_L: noop
