@@ -65,8 +65,10 @@ menuseparator {
 }
 
 /*地址栏圆角*/
-#urlbar {
-	border-radius: 2em !important;
+#urlbar, #urlbar-background, #urlbar-input-container {
+	border-radius: 1em !important;
+/*	background: rgba(255,255,255,.7) !important; */
+/*    backdrop-filter: blur(4px);	*/
 }
 
 /*地址栏收藏按钮向左偏移 8px*/
